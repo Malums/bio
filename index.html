@@ -1,0 +1,273 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiles</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+        #background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+        }
+        .top-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #ffffff;
+            font-size: 14px;
+            text-decoration: none;
+            z-index: 1;
+        }
+        .top-link a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .top-link a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            gap: 20px;
+            z-index: 1;
+        }
+        .top-profile {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 20px;
+        }
+        .middle-profiles {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 20px;
+        }
+        .bottom-profiles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+        .blur-container {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            color: #ffffff;
+            width: 200px;
+            transition: opacity 0.5s ease-out; /* Add transition for fading effect */
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .username {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+        .username-red {
+            color: #ff0000;
+        }
+        .social-links {
+            margin-top: 10px;
+        }
+        .social-links a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        .heart {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ff0000;
+            font-size: 24px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+        .skull {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            transition: opacity 0.3s ease-out;
+        }
+        .skull.hidden {
+            opacity: 0;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 1000;
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity 0.5s ease-out; /* Add transition for fading effect */
+        }
+        #audio {
+            display: none; /* Hides the audio element */
+        }
+    </style>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="https://files.catbox.moe/10233w.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="audio" preload="auto">
+        <source src="song.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="overlay" class="overlay">
+        Click Me
+    </div>
+
+    <div class="top-link">
+        <a href="https://discord.gg/withdrawal" target="_blank">withdrawal</a>
+    </div>
+
+    <div class="container">
+        <!-- Top Profile: Nach -->
+        <div class="top-profile">
+            <div class="blur-container">
+                <img src="https://media.discordapp.net/attachments/1263807929190977536/1264182482207768626/IMG_1781.png?ex=669cf12f&is=669b9faf&hm=9c2e5f6f0b29532b98f1fd1bc0766439829164398a438f0eb26d67c4dc2ee605&=&format=webp&quality=lossless&width=355&height=350" alt="Masked Arab Profile Picture" class="profile-pic">
+                <div class="username">Masked Arab</div>
+                <div class="social-links">
+                    <a href="https://discordapp.com/users/1212242774863380563" target="_blank">Discord</a>
+                    <a href="https://t.me/masked_arab" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle Profiles: Cryption and Cherry -->
+        <div class="middle-profiles">
+            <div class="blur-container">
+                <img src="https://media.discordapp.net/attachments/1263795786798465107/1263799642903285791/IMG_8133.webp?ex=669cde23&is=669b8ca3&hm=9bd690b9eee553473d9c9212efe75a9e7f919b12515ed7a24aa999d69fd5587a&=&format=webp" alt="vont Profile Picture" class="profile-pic">
+                <div class="username">vont</div>
+                <div class="social-links">
+                    <a href="https://t.me/courpz" target="_blank" style="color: #ffffff;">Telegram</a>
+                </div>
+            </div>
+
+            <div class="blur-container">
+                <img src="https://media.discordapp.net/attachments/1256148570000855135/1258388651767889972/409852c2bf0006d2f61c48e0ef6f98e5.webp?ex=669c4c82&is=669afb02&hm=1c2c323a756d785732443bb71b670cb38b0cf0c1084fab18da63ba26f44994fc&=&format=webp" alt="invasive Profile Picture" class="profile-pic">
+                <div class="username">invasive</div>
+                <div class="social-links">
+                    <a href="https://doxbin.com/user/invasive" target="_blank">Doxbin</a>
+                    <a href="https://t.me/invasve" target="_blank">Telegram</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Profiles: Ashtray, Lovestar, Packrunner, Trygun -->
+        <div class="bottom-profiles">
+            <div class="blur-container">
+                <img src="https://files.catbox.moe/3hj6ut.gif" alt="Ashtray Profile Picture" class="profile-pic">
+                <div class="username">Ashtray</div>
+                <div class="social-links">
+                    <a href="https://doxbin.com/user/ashpit" target="_blank">Doxbin</a>
+                    <a href="https://pornhub.com" target="_blank">Address</a>
+                </div>
+            </div>
+
+            <div class="blur-container">
+                <img src="https://files.catbox.moe/kqy90v.gif" alt="Lovestar Profile Picture" class="profile-pic">
+                <div class="username">Lovestar</div>
+                <div class="social-links">
+                    <a href="https://doxbin.com/user/lovestar" target="_blank">Doxbin</a>
+                    <a href="https://t.me/Lovestarxo" target="_blank">Telegram</a>
+                </div>
+            </div>
+
+            <div class="blur-container">
+                <img src="https://files.catbox.moe/hkis3f.gif" alt="Packrunner Profile Picture" class="profile-pic">
+                <div class="username">Packrunner</div>
+                <div class="social-links">
+                    <a href="https://t.me/n0txmr" target="_blank">Telegram</a>
+                    <a href="https://doxbin.com/user/voided" target="_blank">Doxbin</a>
+                    <a href="https://x.com/fuckxmr?t=CnZJhpe5KxEg0Q5QMl_jUA&s=09" target="_blank">Twitter</a>
+                </div>
+            </div>
+
+            <div class="blur-container">
+                <img src="https://files.catbox.moe/9nk1q1.gif" alt="Trygun Profile Picture" class="profile-pic">
+                <div class="username">Trygun</div>
+                <div class="social-links">
+                    <a href="https://t.me/trygun" target="_blank" style="color: #ffffff;">Telegram</a>
+                    <a href="https://x.com/Prudnce6" target="_blank" style="color: #ffffff;">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('overlay').addEventListener('click', function() {
+            this.style.opacity = '0'; // Fade out the overlay
+            setTimeout(() => {
+                this.style.display = 'none'; // Hide the overlay
+                openFullscreen(); // Enter full-screen mode
+            }, 500); // Match this timeout with the CSS transition duration
+
+            var audio = document.getElementById('audio');
+            audio.play(); // Start playing the audio
+        });
+
+        function openFullscreen() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                document.documentElement.msRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
